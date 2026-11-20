@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: cited guides, roadmap to the platinum, missable flags, saved checklist.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%235b2a86'/%3E%3Ctext x='32' y='44' font-size='36' font-family='sans-serif' font-weight='bold' fill='%23ffd166' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; Offline guide</p>
+    <h1>Leonida Legend</h1>
+    <p class="subtitle">Every one of the 55 trophies — official name, description and grade, a guide in our own words with its sources, a roadmap to the platinum, and a checklist that remembers what you earned.</p>
+    <div class="progress-wrap" aria-label="Trophy progress">
+      <div class="progress-line"><span id="progressText">0 of 55 earned</span><span id="progressPct">0%</span></div>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+      <p class="progress-grades" id="gradeCounts">Platinum 0/1 &middot; Gold 0/2 &middot; Silver 0/6 &middot; Bronze 0/46</p>
+    </div>
+  </div>
+</header>
+<nav class="tabs" aria-label="Views">
+  <button type="button" id="tabTracker" class="tab active" data-view="tracker">Tracker</button>
+  <button type="button" id="tabRoadmap" class="tab" data-view="roadmap">Roadmap to Platinum</button>
+  <button type="button" id="tabMissables" class="tab" data-view="missables">Missables</button>
+</nav>
+<main>
+  <section id="viewTracker" class="view">
+    <div class="toolbar">
+      <label class="search-label">Search <input id="search" type="search" placeholder="Trophy, mission or keyword…" autocomplete="off"></label>
+      <fieldset class="kind-filters" id="kindFilters">
+        <legend>Kind</legend>
+        <button type="button" class="chip active" data-kind="all">All 55</button>
+        <button type="button" class="chip" data-kind="story">Story</button>
+        <button type="button" class="chip" data-kind="missable">Missable</button>
+        <button type="button" class="chip" data-kind="collectibles">Collectibles</button>
+        <button type="button" class="chip" data-kind="activities">Activities</button>
+        <button type="button" class="chip" data-kind="online">Online</button>
+      </fieldset>
+      <label class="grade-label">Grade
+        <select id="gradeFilter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="toggle"><input type="checkbox" id="spoilerToggle"> Hide story spoilers</label>
+      <label class="toggle"><input type="checkbox" id="earnedOnly"> Earned only</label>
+      <div class="io-buttons">
+        <button type="button" id="exportBtn">Export progress</button>
+        <button type="button" id="importBtn">Import progress</button>
+        <input id="importFile" type="file" accept="application/json,.json" hidden>
+        <button type="button" id="sampleBtn" title="Tick a sample set of 14 trophies to preview the tracker">Load sample</button>
+        <button type="button" id="resetBtn">Reset</button>
+      </div>
+    </div>
+    <p class="online-note" id="onlineNote" hidden>No online trophies: GTA VI launches as a single-player game with no new GTA Online, so all 55 trophies are offline. (Source: PowerPyx trophy guide; PSNProfiles.)</p>
+    <p class="list-meta" id="listMeta">Showing 55 of 55 trophies</p>
+    <div class="layout">
+      <ul class="trophy-list" id="trophyList"></ul>
+      <aside class="detail" id="detailPanel" aria-live="polite">
+        <p class="detail-empty">Select a trophy to read its guide, sources and roadmap step.</p>
+      </aside>
+    </div>
+  </section>
+  <section id="viewRoadmap" class="view" hidden>
+    <div class="roadmap-head">
+      <h2>Roadmap to the platinum</h2>
+      <p id="roadmapFacts"></p>
+    </div>
+    <ol class="roadmap-steps" id="roadmapSteps"></ol>
+    <p class="roadmap-source">Roadmap facts and timings: PowerPyx — GTA 6 Trophy Guide &amp; Roadmap. Trophy names, descriptions and grades: PlayStation, as tracked by PSNProfiles and Exophase.</p>
+  </section>
+  <section id="viewMissables" class="view" hidden>
+    <h2>Missable trophies</h2>
+    <div class="missable-card" id="missableCard"></div>
+    <h3>Why almost nothing can be missed</h3>
+    <ul class="safe-list">
+      <li>All 12 story trophies unlock automatically and cannot be missed.</li>
+      <li>Every trophy-related quest giver is still available after the story in free-roam.</li>
+      <li>Optional missions that expire (black icons with pink letters) do not matter for trophies — there are 200–300 of them and the 100% checklist needs any 100.</li>
+      <li>Nothing on the 100% completion checklist is missable; everything is doable after the story.</li>
+      <li>Cheats disable trophies and saving — keep them off. There is no mission replay, so keep manual saves at the start and end of each chapter (15 slots).</li>
+    </ul>
+    <p class="roadmap-source">Source: PowerPyx — GTA 6 Trophy Guide &amp; Roadmap.</p>
+  </section>
+</main>
+<footer>
+  <p>Leonida Legend is an unofficial fan guide. Grand Theft Auto and GTA are trademarks of Take-Two Interactive; this guide uses no Rockstar artwork, logos or game screenshots. Trophy names, descriptions and grades are PlayStation's official list, as tracked by PSNProfiles and Exophase. Guide text is written in our own words; every trophy names its sources beside the guide.</p>
+  <p>Works fully offline: the app loads only files from this folder and saves your checklist in your browser (localStorage).</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
